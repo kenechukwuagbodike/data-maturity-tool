@@ -1,0 +1,52 @@
+{
+  "documents": [
+    {
+      "id": "nhs-data-saves-lives-2021-2022",
+      "title": "Data saves lives: reshaping health and social care with data",
+      "filename": "nhs-data-strategy-2021-2022.md",
+      "source_url": "https://www.gov.uk/government/publications/data-saves-lives-reshaping-health-and-social-care-with-data/data-saves-lives-reshaping-health-and-social-care-with-data",
+      "retrieved_date": "2026-08-07",
+      "format": "md",
+      "method": "fetch_with_headers",
+      "status": "verified",
+      "citation_check": "discrepancy",
+      "notes": "Brief cites this as 'NHS Data Strategy (2021)'. Draft published June 2021, but this is the final version, updated 15 June 2022 per the page itself and its Crown copyright 2022 notice, same document, later date than the brief's label. Single HTML page, no separate PDF exists. Fetched raw HTML with fetch_with_headers.py, converted structurally with html_to_markdown.py, not AI-summarised."
+    },
+    {
+      "id": "cmmi-dmm-v1-0-2014",
+      "title": "Data Management Maturity (DMM) Model, Version 1.0",
+      "filename": "cmmi-dmm-v1.0-2014.pdf",
+      "source_url": "https://static1.squarespace.com/static/5530dddfe4b0679504639dc1/t/677e52ec5b622c559248639f/1736332025799/DMM+-+CMMI+Framework.pdf",
+      "retrieved_date": "2026-08-07",
+      "format": "pdf",
+      "method": "fetch_with_headers",
+      "status": "verified",
+      "citation_check": "confirmed",
+      "notes": "Full 248-page CMMI Institute model document, August 2014, v1.0. Page 1 confirms title and version. Not hosted on cmmiinstitute.com/isaca.org directly; those domains now gate the current CMMI V3.0 quick reference guide behind a login/lead-gen form and no longer publish the standalone legacy DMM model the brief cites. This appears to be the original publicly circulated v1.0 model document, third-party mirrored. Superseded by CMMI V3.0 (2023), which folded data management into the unified CMMI model; the brief's specific 'CMMI-DMM' citation refers to this earlier, no-longer-independently-sold product."
+    },
+    {
+      "id": "dama-dmbok2-2017",
+      "title": "DAMA-DMBOK: Data Management Body of Knowledge, Second Edition",
+      "filename": "dama-dmbok-2nd-edition-data-management-body-of-knowledge.pdf",
+      "source_url": "unknown, supplied directly rather than fetched",
+      "retrieved_date": "2026-10-02",
+      "format": "pdf",
+      "method": "manual",
+      "status": "verified",
+      "citation_check": "confirmed",
+      "notes": "849 pages. Contents page (p.2-3) confirms Second Edition structure: Chapter 1 Data Management, Chapter 2 Data Handling Ethics, Chapter 3 Data Governance, matching the official 2017 DAMA International edition the brief cites as 'DAMA DMBOK v2'. An earlier file placed in this library was the First Edition (2009, Technics Publications, ISBN 978-0-9771400-8-4) and was replaced by this one after the version mismatch was caught. Provenance caveat: PDF metadata shows Producer/Creator 'calibre' and a Title field reading '...- PDFDrive.com', indicating this copy was sourced from a third-party aggregator/scan site rather than DAMA International or Technics Publications directly. Content structure matches the genuine Second Edition; treat as unofficial mirror, not an original-publisher copy."
+    },
+    {
+      "id": "gartner-eim-maturity-model-g00289832",
+      "title": "Gartner's Enterprise Information Management Maturity Model",
+      "filename": "382541841-L-Gartners-enterprise-information-Maturity-Model.pdf",
+      "source_url": "unknown, supplied directly rather than fetched",
+      "retrieved_date": "2026-10-02",
+      "format": "pdf",
+      "method": "manual",
+      "status": "verified, restricted, do not distribute",
+      "citation_check": "discrepancy",
+      "notes": "17 pages. Author Douglas Laney, Gartner research ID G00289832, published 2 March 2016, refreshed 19 June 2017. Confirms the 7 EIM building blocks: vision, strategy, metrics, governance, organization and roles, information lifecycle, enabling infrastructure. Brief cites 'Gartner Data Management Maturity Model' generically; this is the closest genuine Gartner artifact found, the Enterprise Information Management (EIM) Maturity Model, not a document literally titled 'Data Management Maturity Model'. LICENSING: every page is watermarked 'This research note is restricted to the personal use of johnny.garcia@entel.pe', meaning this is a named individual's paid Gartner seat licence, not a public or redistributable copy. Obtained informally, not through docs-extractor fetch. Kept out of the git repo entirely (library/*.pdf gitignored) per instruction; usable only as private background reading to inform question design and framework references in this project, never to be published, committed, or embedded in any client-facing or portfolio deliverable."
+    }
+  ]
+}

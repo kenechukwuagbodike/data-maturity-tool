@@ -1,0 +1,27 @@
+{
+  "Data Infrastructure": [
+    "Consolidate the highest-value datasets onto a single governed platform before adding any new source system.",
+    "Automate the manual data movement causing the most rework: replace it with a scheduled, monitored pipeline.",
+    "Define and test a recovery time objective and recovery point objective for your most critical dataset."
+  ],
+  "Data Quality and Governance": [
+    "Assign a named owner to every dataset used in board-level or client-facing reporting.",
+    "Stand up automated quality checks (completeness, accuracy, freshness) on your three most-used datasets.",
+    "Publish a single governed definition for each core reference entity (customer, product, region) and retire local variants."
+  ],
+  "Analytics and Reporting": [
+    "Build a certified metric layer for your top 5 KPIs so every report draws from the same definition and source.",
+    "Move your highest-effort recurring report from manual assembly to a scheduled, automated build.",
+    "Train a self-service cohort in one business unit and measure their report-request volume before and after."
+  ],
+  "AI and ML Readiness": [
+    "Stand up a defined experimentation environment separate from production, even if it starts with a single technical owner.",
+    "Document and codify a deployment path for the next model you build, rather than leaving it in a notebook.",
+    "Create an intake process that scores AI opportunities against feasibility and business value before any build starts."
+  ],
+  "Data Culture and Skills": [
+    "Secure a named executive sponsor for the data function with a defined mandate and budget line.",
+    "Run a baseline data literacy assessment and target training at the roles with the largest gap.",
+    "Embed a data specialist inside one business unit for a fixed period and track the change in decision quality."
+  ]
+}

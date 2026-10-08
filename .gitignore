@@ -1,0 +1,39 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Generated outputs (regenerate from pipeline)
+assessment/*.pdf
+
+# Reference library: licensed/third-party source PDFs, not ours to
+# redistribute. references.json (the manifest) and public-domain docs
+# (e.g. the NHS strategy) stay tracked so the citation is still visible.
+library/*.pdf
+
+# Test scenario scratch material (internal QA, not a deliverable)
+test-scenarios/
+
+# Logs
+*.log
+run_log.txt
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/

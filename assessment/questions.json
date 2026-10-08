@@ -1,0 +1,216 @@
+{
+  "maturity_levels": {
+    "1": "Ad Hoc",
+    "2": "Developing",
+    "3": "Defined",
+    "4": "Managed",
+    "5": "Optimising"
+  },
+  "dimensions": [
+    {
+      "number": 1,
+      "name": "Data Infrastructure",
+      "questions": [
+        {
+          "id": "1.1",
+          "question": "How would you describe your organisation's core data storage and platform architecture?",
+          "level_1": "Data lives in disconnected spreadsheets and local files. No shared platform exists.",
+          "level_3": "A defined data platform exists (warehouse, lakehouse, or equivalent) with documented ownership and access rules.",
+          "level_5": "A unified, monitored platform serves all business units, with capacity and performance actively managed against demand."
+        },
+        {
+          "id": "1.2",
+          "question": "How are data pipelines built and run across your organisation?",
+          "level_1": "Data is moved manually: exports, email attachments, copy-paste between systems.",
+          "level_3": "Pipelines are scripted and scheduled, with documented ownership and failure alerts.",
+          "level_5": "Pipelines are orchestrated, version-controlled, and automatically tested before deployment, with lineage tracked end to end."
+        },
+        {
+          "id": "1.3",
+          "question": "How do your core systems (CRM, finance, operations) share data with each other?",
+          "level_1": "Systems do not share data automatically. Integration means someone re-keys or re-uploads.",
+          "level_3": "Point-to-point integrations exist for the highest-priority systems, documented and maintained.",
+          "level_5": "Integration runs on a managed API or event-driven layer, with new systems onboarded to a standard pattern, not a one-off build."
+        },
+        {
+          "id": "1.4",
+          "question": "How would your infrastructure cope with a sudden 5x increase in data volume or user demand?",
+          "level_1": "It would not. Capacity is fixed and any growth requires manual, reactive intervention.",
+          "level_3": "Capacity can be increased, but it requires planning and lead time; scaling is not automatic.",
+          "level_5": "Infrastructure scales elastically against demand, with cost and performance monitored continuously."
+        },
+        {
+          "id": "1.5",
+          "question": "What happens to your data and systems if a critical platform fails today?",
+          "level_1": "There is no tested backup or recovery plan. Recovery time and data loss are unknown.",
+          "level_3": "Backups exist and are documented, with a defined but untested recovery process.",
+          "level_5": "Recovery time and recovery point objectives are defined, tested regularly, and consistently met."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "name": "Data Quality and Governance",
+      "questions": [
+        {
+          "id": "2.1",
+          "question": "Do you have a documented data owner for each critical dataset?",
+          "level_1": "No ownership is defined anywhere.",
+          "level_3": "Ownership defined for most datasets, documented in a data catalogue.",
+          "level_5": "All datasets have owners. Ownership triggers automatic quality alerts and SLAs."
+        },
+        {
+          "id": "2.2",
+          "question": "How do you know when your data is inaccurate, incomplete, or inconsistent?",
+          "level_1": "You find out when a report looks wrong or a client complains.",
+          "level_3": "Quality checks exist for key datasets, run on a defined schedule.",
+          "level_5": "Quality rules run continuously with automated alerts, and failures trigger a defined remediation process."
+        },
+        {
+          "id": "2.3",
+          "question": "If a number in a report looks wrong, can you trace it back to its source?",
+          "level_1": "No. Tracing a number back to its origin is manual guesswork, if it is possible at all.",
+          "level_3": "Lineage is documented for the most important reports and datasets.",
+          "level_5": "Lineage is tracked automatically end to end, from source system to final report, for all critical data."
+        },
+        {
+          "id": "2.4",
+          "question": "Do different teams use the same definition for shared reference data (customer, product, region)?",
+          "level_1": "Each team maintains its own version. Definitions conflict and nobody reconciles them.",
+          "level_3": "Core reference data is defined centrally, though some teams still maintain local variants.",
+          "level_5": "A single, governed source of reference data is used organisation-wide, with change managed through a formal process."
+        },
+        {
+          "id": "2.5",
+          "question": "Is there a data governance policy, and is it actually followed?",
+          "level_1": "No policy exists, or one exists but nobody references it.",
+          "level_3": "A policy exists, is documented, and is followed for the highest-risk data.",
+          "level_5": "The policy is enforced through tooling and monitoring, with compliance reviewed and reported regularly."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "name": "Analytics and Reporting",
+      "questions": [
+        {
+          "id": "3.1",
+          "question": "If you asked three teams to define 'revenue' or your equivalent core metric, would you get the same answer?",
+          "level_1": "No. Each team calculates it differently and nobody has reconciled the difference.",
+          "level_3": "Core metrics are defined centrally and documented, though some legacy reports still diverge.",
+          "level_5": "A single certified metric layer feeds every report and dashboard. Divergence is not possible without approval."
+        },
+        {
+          "id": "3.2",
+          "question": "When someone needs a new report or analysis, what happens?",
+          "level_1": "They wait for IT or a data specialist to build it for them, however long that takes.",
+          "level_3": "Self-service BI tools exist and are used by trained staff for common questions.",
+          "level_5": "Self-service is the default across the business, with governance guardrails built into the tooling itself."
+        },
+        {
+          "id": "3.3",
+          "question": "Are the dashboards your organisation has built actually used?",
+          "level_1": "Dashboards exist but sit unopened. Decisions are made without them.",
+          "level_3": "Key dashboards are checked regularly by the teams they were built for.",
+          "level_5": "Dashboards are embedded in daily operating rhythm and decisions reference them directly, with usage itself monitored."
+        },
+        {
+          "id": "3.4",
+          "question": "How are your regular reports (weekly, monthly, board-level) produced?",
+          "level_1": "Manually, by someone assembling numbers from multiple sources by hand each time.",
+          "level_3": "Reports are templated and partially automated, with manual review before distribution.",
+          "level_5": "Reports generate automatically on schedule, from governed data, with exceptions flagged rather than manually checked."
+        },
+        {
+          "id": "3.5",
+          "question": "Can your analysts explore data freely to answer a new question, or only run pre-built reports?",
+          "level_1": "Only pre-built reports exist. Any new question requires a new request to IT.",
+          "level_3": "Analysts can query governed datasets directly for ad hoc analysis.",
+          "level_5": "Ad hoc exploration is standard practice, supported by a governed semantic layer that prevents inconsistent answers."
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "name": "AI and ML Readiness",
+      "questions": [
+        {
+          "id": "4.1",
+          "question": "Does your organisation have an environment where staff can experiment with models before committing to build one?",
+          "level_1": "No. There is no separation between experimentation and production, so nobody experiments.",
+          "level_3": "A defined experimentation environment exists, used by a small technical team.",
+          "level_5": "A managed experimentation platform is available broadly, with reusable tooling and tracked results."
+        },
+        {
+          "id": "4.2",
+          "question": "When a model is built, how does it reach production use?",
+          "level_1": "It does not. Models stay in notebooks or spreadsheets and are never deployed.",
+          "level_3": "A defined but manual deployment process exists, owned by a specific person or team.",
+          "level_5": "Models deploy through an automated, tested pipeline, consistent with how software is shipped elsewhere in the organisation."
+        },
+        {
+          "id": "4.3",
+          "question": "Once a model is live, how do you know if its performance has degraded?",
+          "level_1": "You do not monitor it. Degradation is discovered when outcomes visibly go wrong.",
+          "level_3": "Performance is checked periodically against a defined schedule.",
+          "level_5": "Performance and drift are monitored continuously, with automated alerts and a defined retraining trigger."
+        },
+        {
+          "id": "4.4",
+          "question": "Is data prepared and curated in a form that is ready for model-building, or does every project start from raw data?",
+          "level_1": "Every project starts from raw, unlabelled, uncurated data with no reuse between projects.",
+          "level_3": "Common features and datasets are documented and reused across projects.",
+          "level_5": "A governed feature store or equivalent makes curated, reusable data available to any project on demand."
+        },
+        {
+          "id": "4.5",
+          "question": "How does your organisation decide which AI or ML opportunities to pursue?",
+          "level_1": "There is no process. Ideas are pursued based on whoever is most enthusiastic at the time.",
+          "level_3": "A defined intake process exists, with opportunities assessed against feasibility and value.",
+          "level_5": "AI opportunities are prioritised through a structured, business-case-driven pipeline, reviewed and adjusted regularly."
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "name": "Data Culture and Skills",
+      "questions": [
+        {
+          "id": "5.1",
+          "question": "Does your senior leadership actively sponsor and invest in the data function?",
+          "level_1": "No. Data is treated as a cost centre with no executive champion.",
+          "level_3": "A senior sponsor exists and data initiatives receive defined, if limited, investment.",
+          "level_5": "Data strategy is set and actively championed at C-suite level, with investment tied to business outcomes."
+        },
+        {
+          "id": "5.2",
+          "question": "Do staff outside the data team have the skills to work confidently with data?",
+          "level_1": "No training exists. Data literacy varies entirely by individual initiative.",
+          "level_3": "Training is available and taken up by some teams, with basic literacy expected in relevant roles.",
+          "level_5": "A structured, organisation-wide data literacy programme is embedded, with literacy tracked as a workforce capability."
+        },
+        {
+          "id": "5.3",
+          "question": "Are data roles and responsibilities clearly defined across the organisation?",
+          "level_1": "No dedicated data roles exist. Data work is whatever falls to whoever is available.",
+          "level_3": "Core roles (owners, stewards, analysts, engineers) are defined for priority areas.",
+          "level_5": "A clear RACI for data roles exists organisation-wide and is reviewed as the organisation and its data needs evolve."
+        },
+        {
+          "id": "5.4",
+          "question": "How does the data team work with the rest of the business?",
+          "level_1": "The data team is siloed. Business units submit requests and wait, with little collaboration.",
+          "level_3": "Data specialists are aligned to business units and consulted on relevant projects.",
+          "level_5": "Data expertise is embedded within business units, shaping decisions from the start rather than reporting after the fact."
+        },
+        {
+          "id": "5.5",
+          "question": "When a significant decision is made, is data part of how it gets justified?",
+          "level_1": "Decisions are made on judgement and experience alone. Data is rarely consulted.",
+          "level_3": "Data is consulted for major decisions, though not consistently required.",
+          "level_5": "Data-driven justification is the expected standard for significant decisions, and this expectation is actively reinforced by leadership."
+        }
+      ]
+    }
+  ]
+}
