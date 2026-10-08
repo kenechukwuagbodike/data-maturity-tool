@@ -1,8 +1,8 @@
 # Project 10: Data Maturity Assessment Tool
-**Status:** Building, Session 3 complete (dashboard + PDF report done, deployment next)
-**Last Updated:** 2026-10-03
+**Status:** Building, Session 4 complete (GitHub live, Streamlit deployment next)
+**Last Updated:** 2026-10-08
 **Live Demo:** Not yet deployed
-**GitHub:** Not yet created
+**GitHub:** https://github.com/kenechukwuagbodike/data-maturity-tool
 
 ---
 
