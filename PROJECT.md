@@ -1,7 +1,7 @@
 # Project 10: Data Maturity Assessment Tool
-**Status:** Building, Session 4 complete (GitHub live, Streamlit deployment next)
+**Status:** 🟢 Live, cross-link with P9 live in both directions
 **Last Updated:** 2026-10-08
-**Live Demo:** Not yet deployed
+**Live Demo:** https://keni-data-maturity-tool.streamlit.app/
 **GitHub:** https://github.com/kenechukwuagbodike/data-maturity-tool
 
 ---
@@ -153,10 +153,28 @@ LinkedIn launch post. Full reasoning saved to memory
   together, not separately, so the two tools go live as a pair rather
   than P9 changing underneath anyone before P10 exists to link to it.
 
+### Session 5 (2026-10-08): Deployment and closing the cross-link loop
+- Deployed to Streamlit Community Cloud:
+  https://keni-data-maturity-tool.streamlit.app/. Confirmed working by
+  Kene directly on the live container: PDF download succeeds (the exact
+  failure mode that broke P9 pre-deploy, kaleido needing Chrome, did not
+  recur here, `packages.txt` and the `starlette` pin added ahead of time
+  paid off), radar chart renders, cross-link to P9 works.
+- P9's held-back cross-link commits (4 of them, including a pre-existing
+  unpushed `runtime.txt` fix and an uncommitted README rewrite found
+  sitting in P9's working tree, unrelated to this work) were pushed by
+  Kene directly once P10's deploy was confirmed. Verified live on P9's
+  URL: base app unchanged, `?org=...&sector=...` pre-fills correctly.
+- Built the other half of the loop: P9's results tab now links back to
+  P10 (`build_p10_link()`, sector-mapped the same way P10 maps onto P9).
+  Verified locally with `AppTest`, zero exceptions, correct URL encoding
+  and sector mapping, then pushed. Both directions of the cross-link are
+  now live and confirmed working.
+
 ## Next Actions
-- Deploy P10 to Streamlit Community Cloud
-- Write README, create GitHub repo, commit
-- Push and redeploy P9's cross-link change at the same time P10 goes
-  live (held back deliberately, see Session 4 above)
-- Scope the "combined scorecard" report as a separate v2 feature once
+- Update README.md with the live demo link
+- Scope the "combined scorecard" report as a separate v2 feature now
   both tools are live
+- Write the LinkedIn launch post, framing P9 and P10 as a supporting
+  pair per the earlier positioning decision (see
+  `project_p9_p10_pairing` in memory)

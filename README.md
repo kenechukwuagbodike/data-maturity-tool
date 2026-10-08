@@ -51,7 +51,7 @@ one.
 
 ## Demo
 
-- **Live demo:** _deploying_
+- **Live demo:** https://keni-data-maturity-tool.streamlit.app/
 - **Companion tool:** https://keni-ai-governance-framework.streamlit.app/
 
 ## Getting started
